@@ -1,0 +1,22 @@
+{
+    "name": "nadeem/module-profilepicture",
+    "description": "Magento2 extension to upload and show profile picture on account pages and top header. | Nadeem Khan",
+    "type": "magento2-module",
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Mage2Gen",
+            "email": "info@mage2gen.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Nadeem\\ProfilePicture\\": ""
+        }
+    }
+}
