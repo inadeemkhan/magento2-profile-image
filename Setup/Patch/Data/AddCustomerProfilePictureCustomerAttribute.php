@@ -12,7 +12,7 @@ use Magento\Framework\Setup\ModuleDataSetupInterface;
 use Magento\Framework\Setup\Patch\DataPatchInterface;
 use Magento\Framework\Setup\Patch\PatchRevertableInterface;
 
-class AddProfilePicCustomerAttribute implements DataPatchInterface, PatchRevertableInterface
+class AddCustomerProfilePictureCustomerAttribute implements DataPatchInterface, PatchRevertableInterface
 {
 
     /**
@@ -62,11 +62,11 @@ class AddProfilePicCustomerAttribute implements DataPatchInterface, PatchReverta
         
         $customerSetup->addAttribute(
             Customer::ENTITY,
-            'profile_pic',
+            'customer_profile_picture',
             [
-                'label' => 'profile_pic',
-                'input' => 'text',
-                'type' => 'varchar',
+                'label' => 'customer_profile_picture',
+                'input' => 'file',
+                'type' => 'text',
                 'source' => '',
                 'required' => false,
                 'position' => 333,
@@ -80,11 +80,10 @@ class AddProfilePicCustomerAttribute implements DataPatchInterface, PatchReverta
             ]
         );
         
-        $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'profile_pic');
+        $attribute = $customerSetup->getEavConfig()->getAttribute(Customer::ENTITY, 'customer_profile_picture');
         $attribute->addData([
             'used_in_forms' => [
                 'adminhtml_customer',
-                'adminhtml_checkout',
                 'customer_account_create',
                 'customer_account_edit'
             ]
@@ -104,7 +103,7 @@ class AddProfilePicCustomerAttribute implements DataPatchInterface, PatchReverta
         $this->moduleDataSetup->getConnection()->startSetup();
         /** @var CustomerSetup $customerSetup */
         $customerSetup = $this->customerSetupFactory->create(['setup' => $this->moduleDataSetup]);
-        $customerSetup->removeAttribute(\Magento\Customer\Model\Customer::ENTITY, 'profile_pic');
+        $customerSetup->removeAttribute(\Magento\Customer\Model\Customer::ENTITY, 'customer_profile_picture');
 
         $this->moduleDataSetup->getConnection()->endSetup();
     }

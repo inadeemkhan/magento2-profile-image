@@ -1,0 +1,30 @@
+/* index.phtml */
+body.account .block-dashboard-info .box-information .box-content img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+/* Header Links CSS */
+img.profile-picture-header-links.action.switch {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: -webkit-baseline-middle;
+    margin: 0 10px;
+}
+.header.panel > .header.links > li.greet.welcome,
+.page-header div#switcher-currency {
+    line-height: 3;
+}
+.page-header .panel.wrapper .switcher .options .action.toggle:after,
+.page-header .panel.wrapper .switcher .options .action.toggle:after {
+    line-height: 4.5 !important;
+}
+
+/* edit.phtml */
+body.account form#form-validate fieldset.additional_info .create.account img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}

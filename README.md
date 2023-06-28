@@ -10,7 +10,7 @@
 
 
 ## Main Functionalities
-Magento2 extension to upload and show profile picture on account pages and top header. | Nadeem Khan
+Magento2 extension to set customer profile picture.
 
 ## Installation
 \* = in production please use the `--keep-generated` option
@@ -37,10 +37,13 @@ Magento2 extension to upload and show profile picture on account pages and top h
 
 ## Configuration
 
- - enable (profile_image/general/enable)
+
 
 
 ## Specifications
+
+ - Controller
+	- frontend > customer/account/index
 
  - Helper
 	- Nadeem\ProfilePicture\Helper\Data
@@ -48,5 +51,5 @@ Magento2 extension to upload and show profile picture on account pages and top h
 
 ## Attributes
 
- - Customer - profile_pic (profile_pic)
+ - Customer - customer_profile_picture (customer_profile_picture)
 

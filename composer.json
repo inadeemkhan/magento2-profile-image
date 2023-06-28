@@ -1,6 +1,6 @@
 {
     "name": "nadeem/module-profilepicture",
-    "description": "Magento2 extension to upload and show profile picture on account pages and top header. | Nadeem Khan",
+    "description": "Magento2 extension to set customer profile picture.",
     "type": "magento2-module",
     "license": "proprietary",
     "authors": [

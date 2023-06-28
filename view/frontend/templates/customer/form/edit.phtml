@@ -1,0 +1,22 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<fieldset class="fieldset create account" data-hasrequired="<?= /* @escapeNotVerified */ __('* Required Fields') ?>">
+    <legend class="legend">
+        <span><?= /* @escapeNotVerified */ __('Profile Picture') ?></span>
+    </legend>
+ 
+    <?php if ($profilePicture = $block->getCustomerProfilePictureUrl()): ?>
+        <img src="<?= __($profilePicture) ?>" alt="Profile Picture'" />
+    <?php endif; ?>
+    
+    <div class="field customer_profile_picture ">
+        <div class="control">
+            <input type="file" name="customer_profile_picture" id="customer_profile_picture" title="<?= /* @escapeNotVerified */ __('Profile Picture') ?>" class="input-text" data-validate="{required:false}">
+        </div>
+    </div>
+</fieldset>

@@ -1,0 +1,30 @@
+<?php
+/**
+ * Copyright © 2013-2017 Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+?>
+
+<div class="block block-dashboard-info">
+	<div class="block-title"><strong><?= /* @escapeNotVerified */ __('Profile Picture'); ?></strong></div>
+	<div class="block-content">
+		<div class="box box-information">
+			<div class="box-content">
+                <?php if ($profilePicture = $block->getCustomerProfilePictureUrl()): ?>
+                    <img src="<?= /* @escapeNotVerified */ $profilePicture ?>" alt="Upload Picture" />
+                <?php endif; ?>
+			</div>
+		</div>
+		<div class="box box-newsletter">
+			<strong class="box-title">
+				<span><?= /* @escapeNotVerified */ __('Upload New Profile Picture'); ?></span>
+			</strong>
+			<div class="box-content">
+				<form action="<?= /* @escapeNotVerified */ $this->getUrl('customer/picture/save'); ?>" enctype="multipart/form-data" method="POST">
+					<input type="file" name="customer_profile_pic" accept="image/*">
+					<button type="submit"><span><?= /* @escapeNotVerified */ __('Upload Picture'); ?></span></button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
