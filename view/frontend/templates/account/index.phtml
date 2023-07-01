@@ -15,16 +15,16 @@
                 <?php endif; ?>
 			</div>
 		</div>
-		<div class="box box-newsletter">
+		<!-- <div class="box box-newsletter">
 			<strong class="box-title">
-				<span><?= /* @escapeNotVerified */ __('Upload New Profile Picture'); ?></span>
+				<span><?php /* @escapeNotVerified */ // __('Upload New Profile Picture'); ?></span>
 			</strong>
 			<div class="box-content">
-				<form action="<?= /* @escapeNotVerified */ $this->getUrl('customer/picture/save'); ?>" enctype="multipart/form-data" method="POST">
+				<form action="<?php /* @escapeNotVerified */ // $this->getUrl('customer/picture/save'); ?>" enctype="multipart/form-data" method="POST">
 					<input type="file" name="customer_profile_pic" accept="image/*">
-					<button type="submit"><span><?= /* @escapeNotVerified */ __('Upload Picture'); ?></span></button>
+					<button type="submit"><span><?php /* @escapeNotVerified */ // __('Upload Picture'); ?></span></button>
 				</form>
 			</div>
-		</div>
+		</div> -->
 	</div>
 </div>

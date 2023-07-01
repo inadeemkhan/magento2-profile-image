@@ -45,10 +45,25 @@ class Index extends \Magento\Framework\View\Element\Template
      */
     public function isCustomerLoggedIn()
     {
-        if ($this->customerSession->isLoggedIn() && $this->customerSession->getCustomerId()) {
+        if ($this->_customerSession->isLoggedIn() && $this->_customerSession->getCustomerId()) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Get the customer
+     * @return collection
+     */
+    public function getCustomer($id = false)
+    {
+        if($id){
+			$this->_customerModel->load($id);
+		}
+		elseif($this->_customerSession && $this->_customerSession->getCustomerId()){
+			$this->_customerModel->load($this->_customerSession->getCustomerId());
+		}
+		return $this->_customerModel;
     }
 
     /**
